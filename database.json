@@ -1,0 +1,18 @@
+[
+    {
+        "text": "Passare l'aspirapolvere",
+        "done": false
+    },
+    {
+        "text": "Fare i piatti",
+        "done": false
+    },
+    {
+        "text": "Fare la spesa",
+        "done": true
+    },
+    {
+        "text": "Dare da mangiare al gatto",
+        "done": false
+    }
+]
