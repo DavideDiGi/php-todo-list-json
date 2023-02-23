@@ -1,0 +1,12 @@
+.blue-bg {
+    background-color: rgb(5, 21, 48);
+}
+
+#main-title {
+    font-size: 5rem;
+}
+
+#task {
+    background: none;
+    border: none;
+}
