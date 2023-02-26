@@ -15,22 +15,43 @@
 <body class="blue-bg">
 
     <div id="app">
+
         <div class="container-fluid w-50 mx-auto text-center">
+
             <h1 id="main-title" class="pt-4 pb-2 fw-light text-secondary">ToDo List </h1>
+
             <div class="ul-container w-50 mx-auto text-start">
+
                 <ul class="list-group">
+
                     <li class="list-group-item d-flex justify-content-between align-items-center py-3"
-                        v-for="toDo in toDoes">
-                        <button id="task">{{toDo.text}}</button>
+                        v-for="toDo in toDos">
+
+                        <button :class="{ 'done': toDo.done }" id="task"
+                            v-on:click="toggleDone(toDo)">{{toDo.text}}</button>
+
                         <span class="text-end">
+
                             <button type="button" class="btn-close" aria-label="Close"></button>
+
                         </span>
+
                     </li>
+
                 </ul>
+
                 <div class="input-group mb-3 mt-3">
-                    <input type="text" class="form-control" placeholder="Inserisci elemento...">
-                    <button type="button" class="btn btn-outline-warning">Inserisci</button>
+
+                    <form class="d-flex w-100" action="create.php" method="POST" @submit.prevent="addToDo()">
+                        <input id="toDoText" name="toDoText" type="text" v-model="newToDo.text"
+                            class="form-control rounded-0" placeholder="Inserisci elemento...">
+                        <button type="submit" class="btn btn-outline-warning rounded-0">Inserisci</button>
+
+                    </form>
+
+
                 </div>
+
             </div>
         </div>
     </div>

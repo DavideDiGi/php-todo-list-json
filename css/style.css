@@ -10,3 +10,7 @@
     background: none;
     border: none;
 }
+
+.done {
+    text-decoration: line-through;
+}
